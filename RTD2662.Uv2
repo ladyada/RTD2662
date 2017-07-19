@@ -196,7 +196,7 @@ Options 1,0,0  // Target 'RTD2662'
  HexSel=0
  MG32K=0
  TGMORE=0
- RunUsr 0 1 <Merge128K.bat>
+ RunUsr 0 1 <MAKEBIN.bat>
  RunUsr 1 0 <>
  BrunUsr 0 0 <>
  BrunUsr 1 0 <>
