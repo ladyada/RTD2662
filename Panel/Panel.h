@@ -122,6 +122,7 @@
 #define _PNL_LVDS_L133X1_4                      115
 #define _PNL_LVDS_1M7MS852549                   116
 #define _PNL_TTL_TX26D01VM1CAA                  117
+#define _PNL_LVDS_HV070WSA                      118
              
 #define _PANEL_TYPE                  _PNL_TTL
 								 
@@ -602,5 +603,9 @@
 #include "Panel\PNL_TTL_TX26D01VM1CAA.h"
 #endif
 
+
+#if(_PANEL_TYPE == _PNL_LVDS_HV070WSA)
+#include "Panel\PNL_LVDS_HV070WSA.h"
+#endif
 
 //-----------------------------------------------------------
