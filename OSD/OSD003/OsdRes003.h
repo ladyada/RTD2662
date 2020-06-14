@@ -43,6 +43,8 @@ extern code BYTE *tIcon_Normal[];
 extern code BYTE *tIcon_Select[];
 extern code BYTE *tIcon_Disable[];
 
+extern code BYTE sADAFRUIT[];
+
 extern code BYTE sVGA[];
 extern code BYTE sDVI[];
 extern code BYTE sHDMI[];

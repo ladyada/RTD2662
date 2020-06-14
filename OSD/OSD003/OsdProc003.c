@@ -731,7 +731,7 @@ void CShowAutoAdjust(void)
 	COsdFxDisableOsd();	
 }
 //---------------------------------------------------------------------------
-#define _NOTE_WIDTH						(11 * 12 + 4)	
+#define _NOTE_WIDTH						(15 * 12 + 4)	
 #define _NOTE_HEIGHT					(4 * 18)
 
 void CShowNote(void)
@@ -743,14 +743,14 @@ void CShowNote(void)
     SetOSDDouble(GET_OSD_SIZE() ? 0x03 : 0x00);   
     
 	// Draw Top Line
-	OSDLine(ROW(1), COL(1), LENGTH(8), 0xA6, THE_BYTE0);
-	OSDLine(ROW(1), COL(1), LENGTH(8), 0xA4, THE_BYTE1);
-	OSDLine(ROW(1), COL(1), LENGTH(8), 0x11, THE_BYTE2);
+	OSDLine(ROW(1), COL(1), LENGTH(12), 0xA6, THE_BYTE0);
+	OSDLine(ROW(1), COL(1), LENGTH(12), 0xA4, THE_BYTE1);
+	OSDLine(ROW(1), COL(1), LENGTH(12), 0x11, THE_BYTE2);
 
 	// Draw Bottom Line
-	OSDLine(ROW(3), COL(1), LENGTH(8), 0xA6, THE_BYTE0);
-	OSDLine(ROW(3), COL(1), LENGTH(8), 0xA4, THE_BYTE1);
-	OSDLine(ROW(3), COL(1), LENGTH(8), 0x11, THE_BYTE2);
+	OSDLine(ROW(3), COL(1), LENGTH(12), 0xA6, THE_BYTE0);
+	OSDLine(ROW(3), COL(1), LENGTH(12), 0xA4, THE_BYTE1);
+	OSDLine(ROW(3), COL(1), LENGTH(12), 0x11, THE_BYTE2);
 
 	OSDLine(ROW(2), COL(1), LENGTH(45), 0x10, BYTE_COLOR);
 
@@ -766,7 +766,7 @@ void CShowNote(void)
 		case _SOURCE_VIDEO_TV:		pStr = sTV;			break;
 	}
 	
-	CCenterTextout(pStr,ROW(2),1,8);
+	CCenterTextout(pStr,ROW(2),1,12);
 
 	// Draw Window
 	COsdFxDrawWindow(0,8,								//WORD usXStart,WORD usYStart,  
@@ -781,7 +781,7 @@ void CShowNote(void)
     COsdFxEnableOsd();
     CPowerPanelOn();  
 
-    CTimerReactiveTimerEvent(SEC(5), COsdDispOsdTimerEvent);
+    CTimerReactiveTimerEvent(SEC(20), COsdDispOsdTimerEvent);
     bOSDTimeOut = 0;
 #if(_SLEEP_FUNC)
     bOSDOnScreen = 1;
