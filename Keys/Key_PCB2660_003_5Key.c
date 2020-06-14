@@ -31,12 +31,12 @@ BYTE CKeyScan(void)
     if(_ABS(pData[0], pData[3]) < 3)
     {
         if     (_ABS(pData[0], bAD1_Key_7) < 3)  ucKeyState = _POWER_KEY_MASK;
-        else if(_ABS(pData[0], bAD1_Key_4) < 3)  ucKeyState = _RIGHT_KEY_MASK;
-        else if(_ABS(pData[0], bAD1_Key_2) < 3)  ucKeyState = _LEFT_KEY_MASK;
+        else if(_ABS(pData[0], bAD1_Key_4) < 3)  ucKeyState = _AV1_KEY_MASK;
+        else if(_ABS(pData[0], bAD1_Key_2) < 3)  ucKeyState = _AV2_KEY_MASK;
         else if(_ABS(pData[0], bAD1_Key_3) < 3)  ucKeyState = _MENU_KEY_MASK;
-        else if(_ABS(pData[0], bAD1_Key_1) < 3)  ucKeyState = _SOURCE_KEY_MASK;
-        else if(_ABS(pData[0], bAD1_Key_5) < 3)  ucKeyState = _AV1_KEY_MASK;
-        else if(_ABS(pData[0], bAD1_Key_6) < 3)  ucKeyState = _AV2_KEY_MASK;
+        else if(_ABS(pData[0], bAD1_Key_8) < 3)  ucKeyState = _SOURCE_KEY_MASK;
+        else if(_ABS(pData[0], bAD1_Key_5) < 3)  ucKeyState = _LEFT_KEY_MASK;
+        else if(_ABS(pData[0], bAD1_Key_6) < 3)  ucKeyState = _RIGHT_KEY_MASK;
     }
 		
 #endif
