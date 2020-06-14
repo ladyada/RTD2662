@@ -36,6 +36,7 @@ The generated firmware image output is in `BIN\Flash.bin` You can now load that 
   * Set up the FT232H or MCP2221 to be Python-Blinka-ified by following either guide: <https://learn.adafruit.com/circuitpython-on-any-computer-with-ft232h> or <https://learn.adafruit.com/circuitpython-libraries-on-any-computer-with-mcp2221>
   * Verify that you have Python 3 and the Blinka library, there are some verification steps in the libraries.
   * pip install the CircuitPython RT266x programmer library <https://github.com/adafruit/Adafruit_CircuitPython_RTD266X_Prog>
+  * Connect the Stemma QT cable: Black goes to RTD ground. Blue goes to RTD SDA. Yellow goes to RTD SCL. Sometimes the I2C port is available on the VGA connector - check your board documentation. Make sure if you have the FT232H it is flipped to I2C mode.
   * Run the `write_flash.py` example in that library: `python3 write_flash.py FLASH.BIN`
   * You will see output like
 ```
