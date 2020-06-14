@@ -417,5 +417,5 @@ _RTD_PWM0, _RTD_PWM1, _RTD_PWM2, _RTD_PWM3, _RTD_PWM4, _RTD_PWM5
 
 #define _SLEEP_FUNC                            _DISABLE
 #define _ICM_FUNC                              _DISABLE
-#define _LOGO_ENABLE                           _ENABLE
+#define _LOGO_ENABLE                           _DISABLE
 #define _DEBUG_EN                              _DISABLE
