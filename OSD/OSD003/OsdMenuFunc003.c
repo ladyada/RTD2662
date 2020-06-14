@@ -7792,6 +7792,7 @@ BYTE code s1080P[] = {0x31,0x30,0x38,0x30,0x23,0x00};
 
 void CShowHDMIMode(BYTE x,BYTE y,bit bShowTable)
 {        
+  return;
     if (stModeInfo.IVFreq == 0) 
         return;
 
@@ -7859,7 +7860,7 @@ void CShowHDMIMode(BYTE x,BYTE y,bit bShowTable)
         OutputChar(0x2D);  // "X"
         CShowNumber1(stModeInfo.IVFreq/10, 0);
         OutputChar(0x19);  // "H"
-        OutputChar(0x2F);  // "Z"
+        OutputChar(0x55);  // "Z"
         OutputChar(0x01);  // " "
     
     	stModeInfo.IHWidth  = IHWidth_Tmp;
@@ -7871,6 +7872,8 @@ void CShowHDMIMode(BYTE x,BYTE y,bit bShowTable)
 //---------------------------------------------------------------------------
 void CShowMode(BYTE x,BYTE y)
 {
+  CTextOutEx(sADAFRUIT, x, y);
+
     switch(_GET_INPUT_SOURCE())
     {
 	#if(_HDMI_SUPPORT == _ON)
