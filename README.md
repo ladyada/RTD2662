@@ -52,6 +52,7 @@ Writing address $300...OK!
 ```
   * If you get `RuntimeError: Bad CRC - Data is 47, RTD says 21` run it again
   * Programming should take about 1 or 2 minutes.
+  * Hard cycle *both* power and HDMI cable connections - you have to force reboot and force-reconnect for HDMI configuration
 
 ## How to change/add a panel
   * Copy `PNL_TTL_KD50G21.h` (5" TFT TTL) to new file in same directory
