@@ -123,8 +123,9 @@
 #define _PNL_LVDS_1M7MS852549                   116
 #define _PNL_TTL_TX26D01VM1CAA                  117
 #define _PNL_LVDS_HV070WSA                      118
-             
-#define _PANEL_TYPE                  _PNL_TTL
+#define _PNL_TTL_KD50G21                        119
+ 
+#define _PANEL_TYPE                  _PNL_TTL_KD50G21
 								 
 //-----------------------------------------------------------
 #if(_PANEL_TYPE == _PNL_LVDS)
@@ -133,6 +134,10 @@
 
 #if(_PANEL_TYPE == _PNL_TTL)
 #include "Panel\PNL_TTL.h"
+#endif
+
+#if(_PANEL_TYPE == _PNL_TTL_KD50G21)
+#include "Panel\PNL_TTL_KD50G21.h"
 #endif
 
 #if(_PANEL_TYPE == _PNL_TTL_TX23D11VM2BAA)
