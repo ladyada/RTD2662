@@ -192,11 +192,11 @@ _SOURCE_YPBPR,     _SOURCE_NONE
 #define _PIN_104								(0 & 0x07)	// 0 ~ 7 (0: P7D4i, 1: P7D4o<open-drain>, 2: P7D4o<push-pull>, 3: SD1, 4: IRQ, 5: TCON[5], 6: SPDIF1, 7: IICSDA)
 #define _PIN_105								(0 & 0x07)	// 0 ~ 5 (0: P8D0i, 1: P8D0o<open-drain>, 2: P8D0o<push-pull>, 3: TCON[9], 4: SD0, 5: SPDIF0)
 
-#define _PIN_108								(0 & 0x07)	// 0 ~ 5 (0: P8D1i, 1: P8D1o<open-drain>, 2: P8D1o<push-pull>, 3: CLKO, 4: MCK, 5: TCON[7])
-#define _PIN_109								(0 & 0x07)	// 0 ~ 5 (0: P3D2i, 1: P3D2o<open-drain>, 2: P3D2o<push-pull>, 3: INT0, 4: TCON[3], 5: SCK)
-#define _PIN_110								(0 & 0x07)	// 0 ~ 5 (0: P3D3i, 1: P3D3o<open-drain>, 2: P3D3o<push-pull>, 3: INT1, 4: TCON[6], 5: WS)
-#define _PIN_111								(2 & 0x07)	// 0 ~ 6 (0: P3D4i, 1: P3D4o<open-drain>, 2: P3D4o<push-pull>, 3: T0, 4: TCON[4], 5: SD0, 6: SPDIF0)
-#define _PIN_112								(0 & 0x07)	// 0 ~ 6 (0: P3D5i, 1: P3D5o<open-drain>, 2: P3D5o<push-pull>, 3: T1, 4: TCON[9], 5: SD1, 6: SPDIF1)
+#define _PIN_108								(4 & 0x07)	// 0 ~ 5 (0: P8D1i, 1: P8D1o<open-drain>, 2: P8D1o<push-pull>, 3: CLKO, 4: MCK, 5: TCON[7])
+#define _PIN_109								(5 & 0x07)	// 0 ~ 5 (0: P3D2i, 1: P3D2o<open-drain>, 2: P3D2o<push-pull>, 3: INT0, 4: TCON[3], 5: SCK)
+#define _PIN_110								(5 & 0x07)	// 0 ~ 5 (0: P3D3i, 1: P3D3o<open-drain>, 2: P3D3o<push-pull>, 3: INT1, 4: TCON[6], 5: WS)
+#define _PIN_111								(5 & 0x07)	// 0 ~ 6 (0: P3D4i, 1: P3D4o<open-drain>, 2: P3D4o<push-pull>, 3: T0, 4: TCON[4], 5: SD0, 6: SPDIF0)
+#define _PIN_112								(5 & 0x07)	// 0 ~ 6 (0: P3D5i, 1: P3D5o<open-drain>, 2: P3D5o<push-pull>, 3: T1, 4: TCON[9], 5: SD1, 6: SPDIF1)
 #define _PIN_113								(0 & 0x07)	// 0 ~ 6 (0: P3D6i, 1: P3D6o<open-drain>, 2: P3D6o<push-pull>, 3: TCON[1], 4: SD2, 5: SPDIF2, 6: IrDA)
 #define _PIN_114								(0 & 0x07)	// 0 ~ 6 (0: P3D7i, 1: P3D7o<open-drain>, 2: P3D7o<push-pull>, 3: TCON[13], 4: SD3, 5: SPDIF3, 6: VCLK)
 
@@ -418,4 +418,4 @@ _RTD_PWM0, _RTD_PWM1, _RTD_PWM2, _RTD_PWM3, _RTD_PWM4, _RTD_PWM5
 #define _SLEEP_FUNC                            _DISABLE
 #define _ICM_FUNC                              _DISABLE
 #define _LOGO_ENABLE                           _DISABLE
-#define _DEBUG_EN                              _DISABLE
+#define _DEBUG_EN                              _ENABLE
