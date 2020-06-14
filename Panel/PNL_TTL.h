@@ -200,8 +200,63 @@ code PanelType Panel2 =
 };
 
 //--------------------------------------------------
+// 800x480
+code PanelType Panel3 =
+{
+	// Panel Style
+    _PANEL_TTL |		//_PANEL_TTL,_PANEL_HZ,_PANEL_LVDS,_PANEL_RSDS
+    //_AUTOCALC_PIXCLK |
+    _LVDS_MAP1 |		//_LVDS_MAP1,_LVDS_MAP2
+    _DISP_24_BIT | 		//_DISP_24_BIT,_DISP_18_BIT
+    //_RSDS_GC_SWAP |
+    //_RSDS_HL_SWAP |
+    //_RSDS_PN_SWAP |
+    0x00,                            
+
+	// Panel Configuration
+	  //_DHS_MASK |
+	  //_DISP_EO_SWAP |
+	  //_DISP_RB_SWAP |
+	  //_DISP_ML_SWAP |
+	  _DISP_SINGLE_PORT |	//_DISP_SINGLE_PORT,_DISP_DOUBLE_PORT
+	  _DVS_INVERT |       // pulse low
+	  _DHS_INVERT |       // pulse low
+	  //_DEN_INVERT |
+	  0x00,
+
+
+	86,         // Display Horizontal Start Position
+	800,        // Display Horizontal Width
+
+	928,        // 1Display Horizontal Total Clock Number in One Display Line
+
+	928,        // Display Horizontal Total Clock Number in One Display Line for CVBS PAL
+	928,        // Display Horizontal Total Clock Number in One Display Line for CVBS NTSC
+
+	36,         // Display Vertical Start Position
+	500,        // Display Vertical Height
+
+	525,        // Display Vertical Total Line Number in One Frame
+
+	16,         // Display H Sync Width
+	3,          // Display V Sync Height
+
+	40,         // Typical Pixel Clock in MHz
+
+	1100,		// H Sync Max Freq Unit in 0.1 kHZ
+	100,		// H Sync Min Freq Unit in 0.1 kHZ
+	880,		// V Sync Max Freq Unit in 0.1 HZ
+	490,		// V Sync Min Freq Unit in 0.1 HZ
+
+    // TTL setting   
+    //(3 << 4) |  // Delay
+    (1 << 1) |    // DCLK output enable
+    0x00,         // DCLK Polarity
+};
+
+//--------------------------------------------------
 // Select panel
-BYTE idata ucPanelSelect = 2;
+BYTE idata ucPanelSelect = 3;
 
 
 //--------------------------------------------------
@@ -210,6 +265,7 @@ code PanelType *Panel[] =
      &Panel0,  // 640x480
      &Panel1,  // 800x600
 	 &Panel2,  // 800x480
+	 &Panel3,  // 800x480
 };
 
 //--------------------------------------------------
