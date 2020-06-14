@@ -12,9 +12,15 @@
 #define _PCB_RTD2660_DEMO3                      2       // TB1338
 #define _PCB_RTD2660_DEMO4                      3       // PCB800168?
 
-#define _PCB_TYPE								_PCB_RTD2660_DEMO2
+#define _PCB_RTD2660_ADAFRUIT_BREAKOUT          4       // Generic TTL breakout
+
+#define _PCB_TYPE								_PCB_RTD2660_ADAFRUIT_BREAKOUT 
                                   
 //--------------------------------------------------
+
+#if(_PCB_TYPE == _PCB_RTD2660_ADAFRUIT_BREAKOUT)
+#include "pcb\Pcb_RTD3580D_ADAFRUIT_BREAKOUT.h"
+#endif
 
 #if(_PCB_TYPE == _PCB_GMI2660_DEMO1)
 #include "pcb\Pcb_RTD3580D_LCDTV_DEMO_PCB1.h"
